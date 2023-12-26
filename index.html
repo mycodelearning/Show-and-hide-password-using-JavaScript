@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Hide and Show</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div class="box">
+      <input type="password" placeholder="Enter password" id="password" />
+      <br /><br />
+
+      <input type="checkbox" id="check" />
+      <label for="check">Show Password</label>
+    </div>
+
+    <script>
+      let password = document.querySelector("#password");
+      let check = document.querySelector("#check");
+
+      check.addEventListener("click", function () {
+        if (password.type == "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>
